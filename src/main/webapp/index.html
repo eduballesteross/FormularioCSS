@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Formulario CSS</title>
+ <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+	
+	<h2>HOJA DE INSCRIPCIÓN</h2>
+	<h2>EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h2>
+	
+<div class="datospersonales">
+	<form action="procesarinfo" method="post">
+		<fieldset>
+			<legend>Datos Personales</legend>
+				
+				<label for="nombre">Nombre: </label>
+				<input type="text" id="nombre" name="nombre" required>
+				
+				<label for="apellidos">Apellidos: </label>
+				<input type="text" id="apellidos" name="apellidos" required>
+				
+				<label for="dni">DNI: </label>
+				<input type="text" id="dni" name="dni" required>
+				
+				<br><br>
+				
+				<label for="localidad">Localidad de Nacimiento: </label>
+				<input type="text" id="localidad" name="localidad" required>
+				
+				<label for="provincias">Provincia</label>
+				<select id="provincia" name="provincia">
+					<option value="provincia1" selected>Huelva</option>
+					<option value="provincia2">Cádiz</option>
+					<option value="provincia3">Sevilla</option>
+					<option value="provincia4">Málaga</option>
+					<option value="provincia5">Jaen</option>
+					<option value="provincia6">Córdoba</option>
+					<option value="provincia7">Granada</option>
+				</select>
+				
+				<label for="fechanac">Fecha de Nacimiento: </label>
+				<input type="date" id="fechanac" name="fechanac" required>
+				
+				<br><br>
+				
+				<label for="direccion">Dirección:</label>
+				<input type="text" id="direccion" name="direccion" required>
+				
+				<label for"cp">Código Postal: </label>
+				<input type="number" id="cp" name="cp">
+				
+		</fieldset>
+	</form>
+</div>
+<div class="formacceso">
+	<form action="procesarinfo" method="post">
+		<fieldset>
+			<legend>Forma de acceso</legend>
+			
+			<label>
+				<input type="checkbox" name="opcion" value="opcion1">
+				Directo
+			</label>
+			
+		</fieldset>
+	</form>
+	
+</div>
