@@ -1,70 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<title>Formulario CSS</title>
- <link rel="stylesheet" href="estilos.css">
+	<meta charset="UTF-8">
+	<title>Formulario</title>
+	<link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
-	
-	<h2>HOJA DE INSCRIPCIÓN</h2>
-	<h2>EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h2>
-	
-<div class="datospersonales">
-	<form action="procesarinfo" method="post">
-		<fieldset>
-			<legend>Datos Personales</legend>
+	<header>
+		<h2>HOJA DE INSCRIPCIÓN</h2>
+		<h2>EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h2>
+	</header>
+	<main>
+			<form action="procesarInfo" method="post">
+				<fieldset class="datosPersonales">
+
+					<legend>Datos Personales</legend>
+					<table>
+						<tr>
+							<td><label for="nombre">Nombre</label></td>
+							<td><label for="apellido">Apellidos</label></td>
+							<td><label for="dni">DNI</label></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="nombre" id="nombre"></td>
+							<td><input type="text" name="apellido" id="apellido"></td>
+							<td><input type="text" name="dni" id="dni"></td>
+						</tr>
+						<tr>
+							<td><label for="localidad">Localidad de Nacimiento</label></td>
+							<td><label for="provincia">Provincia</label></td>
+							<td><label for="fechanac">Fecha de Nacimiento</label></td>
+						</tr>
+						<tr>
+							<td><input type="text" id="localidad" name="localidad"></td>
+							<td><select id="provincia" name="provincia">
+									<option value="valor1" selected>Huelva</option>
+									<option value="valor2">Sevilla</option>
+									<option value="valor3">Málaga</option>
+									<option value="valor4">Granada</option>
+									<option value="valor5">Cordoba</option>
+									<option value="valor6">Jaen</option>
+									<option value="valor7">Almería</option>
+								</select></td>
+							<td><input type="date" id="fechanac" name="fechanac"></td>
+						</tr>
+						<tr>
+							<td><label for="direccion">Dirección</label></td>
+							<td></td>
+							<td><label for="cp">Codigo Postal</label></td>
+						</tr>
+						<tr>
+							<td><input type="text" id="direccion" name="direccion"></td>
+							<td></td>
+							<td><input type="number"></td>
+						</tr>
+
+					</table>
+
+				</fieldset>
+
+				<fieldset class="formacceso">
+
+					<legend>Formas de acceso</legend>
+					<form>
+
+						<input type="radio" id="opcion1" name="directo" value="opcion1">
+						<label for="directo">Directo</label>
+						<br>
+						<form>
+							<ul>
+								<li><input type="radio" id="opcion1" name="opciones" value="opcion1">
+									<label for="opcion1">Bachillerato (Modalidad)</label>
+									<input type="text">
+								</li>
+
+
+								<li>
+									<input type="radio" id="opcion2" name="opciones" value="opcion2">
+									<label for="opcion2">FP</label><br>
+								</li>
+								<li>
+									<input type="radio" id="opcion3" name="opciones" value="opcion3">
+									<label for="opcion3">COU (Especifique)</label>
+									<input type="text" id="opcion3" name="opcion3">
+								</li>
+								<li>
+									<input type="radio" id="opcion4" name="opciones" value="opcion4">
+									<label for="opcion4">FP2</label>
+								</li>
+								<li>
+									<input type="radio" id="opcion5" name="opciones" value="opcion5">
+									<label for="opcion3">Otros</label>
+									<input type="text" id="opcion5" name="opcion5">
+								</li>
+							</ul>
+
+						</form>
+						<input type="radio" id="opcion2" name="prueba" value="opcion2">
+						<label for="opcion2">Prueba Libre</label>
+						
+					</form>
+
+				</fieldset>
+				<fieldset class="documentos">
+					<legend>Documentos Adjuntados</legend>
+						<input type="checkbox" id="fotocopia" name="fotocopia">
+						<label for="fotocopia">Fotocopia DNI</label>	
+						 
+						<input type="checkbox" id="certificado" name="certificado">
+						<label for="certificado">Certificado Académico</label>
+						
+						<br>
+						
+						 
+						<input type="checkbox" id="documento" name="documento">
+						<label for="documento">Otros documentos (especifique)</label>	
+						<input type="text" name="documento" id="documento">
+				</fieldset>
 				
-				<label for="nombre">Nombre: </label>
-				<input type="text" id="nombre" name="nombre" required>
-				
-				<label for="apellidos">Apellidos: </label>
-				<input type="text" id="apellidos" name="apellidos" required>
-				
-				<label for="dni">DNI: </label>
-				<input type="text" id="dni" name="dni" required>
-				
-				<br><br>
-				
-				<label for="localidad">Localidad de Nacimiento: </label>
-				<input type="text" id="localidad" name="localidad" required>
-				
-				<label for="provincias">Provincia</label>
-				<select id="provincia" name="provincia">
-					<option value="provincia1" selected>Huelva</option>
-					<option value="provincia2">Cádiz</option>
-					<option value="provincia3">Sevilla</option>
-					<option value="provincia4">Málaga</option>
-					<option value="provincia5">Jaen</option>
-					<option value="provincia6">Córdoba</option>
-					<option value="provincia7">Granada</option>
-				</select>
-				
-				<label for="fechanac">Fecha de Nacimiento: </label>
-				<input type="date" id="fechanac" name="fechanac" required>
-				
-				<br><br>
-				
-				<label for="direccion">Dirección:</label>
-				<input type="text" id="direccion" name="direccion" required>
-				
-				<label for"cp">Código Postal: </label>
-				<input type="number" id="cp" name="cp">
-				
-		</fieldset>
-	</form>
-</div>
-<div class="formacceso">
-	<form action="procesarinfo" method="post">
-		<fieldset>
-			<legend>Forma de acceso</legend>
-			
-			<label>
-				<input type="checkbox" name="opcion" value="opcion1">
-				Directo
-			</label>
-			
-		</fieldset>
-	</form>
-	
-</div>
+			</form>
+	</main>
+</body>
+
+</html>

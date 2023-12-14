@@ -1,9 +1,23 @@
 @charset "ISO-8859-1";
 
-.datospersonales{
+header{
+	text-align: center;
+}
+
+.datosPersonales{
 	background-color: grey;
 }
 
-h2{
-	text-align: center;
+legend{
+	border: 2px solid black;
+	
+}
+
+.formacceso{
+	
+	background-color: sandybrown;
+} 
+
+.documentos{
+	background-color: darkred;
 }
